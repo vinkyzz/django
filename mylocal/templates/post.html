@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Посты
+{% endblock %}
+
+{% block content %}
+<h1>это главная страница</h1>
+<br>
+{% if posts %}
+{% for i in posts %}
+    <h4>{{i.title}}</h4>
+    <p>{{i.post}}</p>
+{% endfor %}
+{% else %}
+<p>Пусто</p>
+{% endif %}
+{% endblock %}
